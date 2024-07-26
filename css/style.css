@@ -16,7 +16,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  height: 80px;
   box-sizing: border-box;
 }
 
@@ -70,7 +69,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #25D366;
+  color: 25D366;
   text-decoration: none;
   font-size: 1em;
   transition: color 0.3s ease;
@@ -117,19 +116,18 @@ nav ul li a:hover {
 .banner-content h2 {
   font-size: 2.5em;
   margin: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 main {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  scroll-padding-top: 80px;
 }
 
 section {
   margin: 40px 0;
-  padding-top: 80px;
-  scroll-margin-top: 80px;
 }
 
 section h2 {
@@ -163,13 +161,26 @@ footer {
 
 .section-content.active {
   display: block;
-  height: 100vh;
-  padding: 40px 20px;
+}
+
+@media (max-width: 1024px) {
+  .header-top {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul {
+      flex-direction: column;
+  }
+
+  .whatsapp-button {
+      margin-top: 10px;
+  }
 }
 
 @media (max-width: 768px) {
   .header-info h1 {
-      font-size: 1.6em;
+      font-size: 1.4em;
   }
 
   .header-info p {
@@ -190,5 +201,36 @@ footer {
 
   .section-content.active {
       height: auto;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-info h1 {
+      font-size: 1.2em;
+  }
+
+  .header-info p {
+      font-size: 0.7em;
+  }
+
+  .whatsapp-button {
+      font-size: 0.7em;
+  }
+
+  .banner-content h2 {
+      font-size: 1.8em;
+  }
+
+  .banner {
+      height: 60vh;
   }
 }
